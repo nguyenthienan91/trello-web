@@ -1,8 +1,8 @@
-import Button from "@mui/material/Button";
-import AccessAlarmsIcon from "@mui/icons-material/AccessAlarms";
-import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import HomeIcon from "@mui/icons-material/Home";
-import { pink } from '@mui/material/colors';
+import Button from '@mui/material/Button'
+import AccessAlarmsIcon from '@mui/icons-material/AccessAlarms'
+import AccessTimeIcon from '@mui/icons-material/AccessTime'
+import HomeIcon from '@mui/icons-material/Home'
+import { pink } from '@mui/material/colors'
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
       <HomeIcon color="disabled" />
       <HomeIcon sx={{ color: pink[500] }} />
     </>
-  );
+  )
 }
 
-export default App;
+export default App

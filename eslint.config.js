@@ -13,6 +13,7 @@ export default defineConfig([
       js.configs.recommended,
       reactHooks.configs['recommended-latest'],
       reactRefresh.configs.vite,
+      'plugin:prettier/recommended',
     ],
     plugins: {
       react,
@@ -34,13 +35,21 @@ export default defineConfig([
       },
     },
     rules: {
-      // 🔥 giữ nguyên rule cũ
+      //React rules
       'react-refresh/only-export-components': 'warn',
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
       'react/prop-types': 0,
       'react/display-name': 0,
 
+      //MUI rule
+      'no-restricted-imports': [
+        'error',
+        {
+          patterns: [{ regex: '^@mui/[^/]+$' }],
+        },
+      ],
+      //Common rules
       'no-console': 1,
       'no-lonely-if': 1,
       'no-unused-vars': 1,
@@ -49,9 +58,9 @@ export default defineConfig([
       'no-multiple-empty-lines': 1,
       'space-before-blocks': ['error', 'always'],
       'object-curly-spacing': [1, 'always'],
-      'indent': ['warn', 2],
-      'semi': [1, 'never'],
-      'quotes': ['error', 'single'],
+      indent: ['warn', 2],
+      semi: [1, 'never'],
+      quotes: ['error', 'single'],
       'array-bracket-spacing': 1,
       'linebreak-style': 0,
       'no-unexpected-multiline': 'warn',
